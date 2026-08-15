@@ -581,13 +581,14 @@ button {
   color: var(--ink-3);
 }
 
-/* The live demo renders each project at a real desktop size (1280x720) and
-   scales it down (--scale, 30% by default) so it looks like a miniature
-   real desktop rather than a squeezed mobile-width site. */
+/* The live demo renders each project at a real desktop size and scales it
+   down (--scale, 30% by default) so it looks like a miniature real desktop
+   rather than a squeezed mobile-width site. --frame-w/h is the project's
+   render size (1280x720 by default, or its own design width when set). */
 .browser-viewport {
   position: relative;
-  width: calc(1280px * var(--scale, 0.3));
-  height: calc(720px * var(--scale, 0.3));
+  width: calc(var(--frame-w, 1280px) * var(--scale, 0.3));
+  height: calc(var(--frame-h, 720px) * var(--scale, 0.3));
   margin-inline: auto;
   background: var(--surface-2);
   overflow: hidden;
@@ -646,8 +647,8 @@ button {
   position: absolute;
   top: 0;
   left: 0;
-  width: 1280px;
-  height: 720px;
+  width: var(--frame-w, 1280px);
+  height: var(--frame-h, 720px);
   transform: scale(var(--scale, 0.3));
   transform-origin: 0 0;
   border: 0;

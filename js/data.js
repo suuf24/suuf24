@@ -249,6 +249,9 @@ const PORTFOLIO = {
       name: "Binance Futures PnL Calculator",
       url: "https://suuf24.github.io/Binance-Futures-PnL-Calculator/",
       category: "Utilitas",
+      // situs ini dirancang mobile-first dengan kabinet max-width 900px;
+      // dirender pada lebar desain aslinya supaya mengisi frame mini-desktop
+      designW: 900,
       description: "Kalkulator untuk menghitung laba rugi (profit and loss) Binance Futures.",
     },
     {

@@ -461,15 +461,23 @@
     frame.addEventListener("load", hideLoading);
 
     // render each project at a real desktop size, scaled down so it reads as
-    // a miniature desktop; 30% when the card has room, less on narrow cards
+    // a miniature desktop; 30% when the card has room, less on narrow cards.
+    // A project can declare its own design width (designW) when it was built
+    // mobile-first (e.g. a 900px max-width cabinet); the stage keeps its fixed
+    // size either way, and the scale is adjusted so the content always fills it.
     var DESKTOP_W = 1280;
+    var DESKTOP_H = 720;
     var DESKTOP_ZOOM = 0.3;
+    var currentFrame = { w: DESKTOP_W, h: DESKTOP_H };
 
     function fitScale() {
       if (!viewport) return;
       var avail = viewport.parentElement.clientWidth;
       if (!avail) return;
-      var scale = Math.min(DESKTOP_ZOOM, avail / DESKTOP_W);
+      // stage width is always min(384px, avail); the content scale follows so
+      // the rendered project fills the stage regardless of its design width
+      var scale =
+        Math.min(DESKTOP_ZOOM, avail / DESKTOP_W) * (DESKTOP_W / currentFrame.w);
       viewport.style.setProperty("--scale", scale.toFixed(4));
     }
 
@@ -482,6 +490,14 @@
 
     function render() {
       var p = data.projects[index];
+      var fw = p.designW || DESKTOP_W;
+      var fh = Math.round(fw * (DESKTOP_H / DESKTOP_W));
+      currentFrame = { w: fw, h: fh };
+      viewport.style.setProperty("--frame-w", fw + "px");
+      viewport.style.setProperty("--frame-h", fh + "px");
+      frame.style.width = fw + "px";
+      frame.style.height = fh + "px";
+      fitScale();
       countEl.textContent = index + 1 + " dari " + data.projects.length;
       nameEl.textContent = p.name;
       catEl.textContent = p.category;
