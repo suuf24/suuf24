@@ -63,7 +63,7 @@
 
   /* satu variabel untuk durasi semua animasi dan transisi; ubah di sini
      untuk mengganti durasi di seluruh situs sekaligus */
-  --anim-dur: 1.5s;
+  --anim-dur: 0.75s;
 }
 
 /* Semua transisi & animasi memakai --anim-dur (default 1.5s). Override
