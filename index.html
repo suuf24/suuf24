@@ -3,307 +3,136 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mohammad Yusuf Rizaldy - Pendidik, Pengembang Web &amp; Praktisi IT</title>
+  <title>Yusuf Rizaldy — Pendidik, Pengembang Web &amp; Praktisi IT</title>
 
-  <meta name="description" content="Mohammad Yusuf Rizaldy, pendidik bilingual, pengembang web, dan praktisi IT dari Jombang, Jawa Timur. Memadukan pendidikan dengan teknologi digital: pengajaran bilingual, WebApp pembelajaran, pengembangan web, pengembangan berbantuan AI, dan administrasi server." />
+  <meta name="description" content="Mohammad Yusuf Rizaldy, pendidik bilingual, pengembang web, dan praktisi IT dari Jombang, Jawa Timur. Memadukan pendidikan dengan teknologi digital: pengajaran bilingual, WebApp pembelajaran, pengembangan web, dan administrasi server." />
   <meta name="author" content="Mohammad Yusuf Rizaldy" />
   <link rel="canonical" href="https://suuf24.vercel.app/" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://suuf24.vercel.app/" />
-  <meta property="og:title" content="Mohammad Yusuf Rizaldy - Pendidik, Pengembang Web &amp; Praktisi IT" />
-  <meta property="og:description" content="Pendidik bilingual, pengembang web, dan praktisi IT yang memadukan pendidikan dengan teknologi digital: pengajaran, WebApp pembelajaran, pengembangan web, pengembangan berbantuan AI, dan administrasi server." />
-  <meta property="og:site_name" content="Mohammad Yusuf Rizaldy" />
+  <meta property="og:title" content="Yusuf Rizaldy — Pendidik, Pengembang Web &amp; Praktisi IT" />
+  <meta property="og:description" content="Pendidik bilingual, pengembang web, dan praktisi IT yang memadukan pendidikan dengan teknologi digital." />
+  <meta property="og:site_name" content="Yusuf Rizaldy" />
 
   <!-- Twitter / X card -->
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Mohammad Yusuf Rizaldy - Pendidik, Pengembang Web &amp; Praktisi IT" />
+  <meta name="twitter:title" content="Yusuf Rizaldy — Pendidik, Pengembang Web &amp; Praktisi IT" />
   <meta name="twitter:description" content="Pendidik bilingual, pengembang web, dan praktisi IT yang memadukan pendidikan dengan teknologi digital." />
 
   <meta name="theme-color" content="#ffffff" />
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
 
-  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/landing.css" />
 </head>
 <body>
-  <a class="skip-link" href="#main">Lewati ke konten utama</a>
-
-  <!-- ============ NAVIGASI ============ -->
-  <header class="site-header" id="site-header">
-    <nav class="nav container" aria-label="Navigasi utama">
-      <a class="brand" href="#home" aria-label="Mohammad Yusuf Rizaldy, kembali ke atas">
-        <span class="brand-mark" aria-hidden="true">&gt;_</span>
-        <span class="brand-name">suuf24</span>
+  <!-- ============ NAVBAR ============ -->
+  <header class="site-nav">
+    <div class="nav-inner">
+      <a class="nav-logo" href="#top" aria-label="Yusuf Rizaldy, kembali ke atas">
+        Yusuf<br />Rizaldy
       </a>
 
-      <ul class="nav-list" id="nav-list"></ul>
-
-      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-list">
-        <span class="nav-toggle-icon" aria-hidden="true"></span>
-        <span class="sr-only">Menu</span>
+      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Menu">
+        <span></span><span></span><span></span>
       </button>
-    </nav>
+
+      <nav class="nav-menu" id="nav-menu" aria-label="Navigasi utama">
+        <ul class="nav-list">
+          <li class="nav-item has-menu">
+            <button class="nav-link" type="button" aria-expanded="false" aria-controls="dd-services">
+              Layanan
+              <svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><polyline points="6 9 12 15 18 9" /></svg>
+            </button>
+            <div class="nav-drop" id="dd-services">
+              <a href="v1/#projects">Pengembangan Web &amp; WebApp</a>
+              <a href="v1/#projects">WebApp Pembelajaran &amp; Simulasi Ujian</a>
+              <a href="v1/#skills">Administrasi Server &amp; Jaringan</a>
+              <a href="v1/#about">Pengajaran Bilingual</a>
+            </div>
+          </li>
+          <li class="nav-item has-menu">
+            <button class="nav-link" type="button" aria-expanded="false" aria-controls="dd-cases">
+              Studi Kasus
+              <svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><polyline points="6 9 12 15 18 9" /></svg>
+            </button>
+            <div class="nav-drop" id="dd-cases">
+              <a href="https://suuf24.github.io/Portfolio-Simulator/" target="_blank" rel="noopener noreferrer">Portfolio Simulator</a>
+              <a href="https://suuf24.github.io/simplepresent/" target="_blank" rel="noopener noreferrer">Simple Present</a>
+              <a href="https://snake-sigma-liard.vercel.app" target="_blank" rel="noopener noreferrer">Snake Game</a>
+              <a href="https://suuf24.github.io/Binance-Futures-PnL-Calculator/" target="_blank" rel="noopener noreferrer">Binance PnL Calculator</a>
+            </div>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="v1/#about">Tentang</a></li>
+          <li class="nav-item"><a class="nav-link" href="Curriculum%20Vitae.pdf" target="_blank" rel="noopener noreferrer">Sumber Daya</a></li>
+          <li class="nav-item"><a class="nav-link" href="mailto:mailtoyusufrizaldy@gmail.com">Kontak</a></li>
+        </ul>
+
+        <a class="nav-cta" href="Curriculum%20Vitae.pdf" target="_blank" rel="noopener noreferrer">
+          Download My CV <span aria-hidden="true">&rarr;</span>
+        </a>
+      </nav>
+    </div>
   </header>
 
-  <main id="main">
-    <!-- ============ BERANDA ============ -->
-    <section class="hero" id="home" aria-labelledby="hero-title">
-      <div class="hero-bg" aria-hidden="true"></div>
-      <div class="container hero-inner">
-        <div class="hero-copy reveal">
-          <h1 class="hero-title" id="hero-title">Mohammad<br />Yusuf Rizaldy</h1>
-          <p class="hero-positioning">Pendidik, Pengembang Web, dan Praktisi IT yang memadukan pendidikan dengan teknologi digital.</p>
-          <p class="hero-intro">Membangun WebApp pembelajaran dan mengelola server Ubuntu.</p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#projects">
-              Lihat Proyek
-              <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
-            </a>
-            <a class="btn btn-ghost" href="#contact">Hubungi Saya</a>
-          </div>
-        </div>
+  <!-- ============ HERO ============ -->
+  <main class="hero" id="top">
+    <div class="hero-name" aria-hidden="true">Yusuf Rizaldy</div>
 
-        <div class="hero-visual reveal">
-          <div class="demo" role="region" aria-label="Pemutar proyek, coba proyek langsung">
-            <div class="demo-head">
-              <span class="demo-kicker">Demo Langsung</span>
-              <span class="demo-count" id="player-count">1 dari 15</span>
-            </div>
-            <h2 class="demo-title" id="player-name">Simple Present</h2>
-            <div class="browser">
-              <div class="browser-bar">
-                <span class="browser-dots" aria-hidden="true"><i></i><i></i><i></i></span>
-                <span class="browser-url" id="player-url"></span>
-                <a
-                  class="browser-ext"
-                  id="player-ext"
-                  href="#"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Buka proyek saat ini di tab baru"
-                >
-                  <svg class="icon" aria-hidden="true"><use href="#i-external"></use></svg>
-                </a>
-              </div>
-              <div class="browser-toolbar">
-                <button type="button" class="browser-nav prev" id="player-prev" aria-label="Proyek sebelumnya">
-                  <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
-                </button>
-                <span class="browser-cat" id="player-cat">Pendidikan</span>
-                <button type="button" class="browser-nav" id="player-next" aria-label="Proyek berikutnya">
-                  <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
-                </button>
-              </div>
-              <div class="browser-viewport">
-                <iframe id="player-frame" title="Pratinjau proyek" loading="lazy"></iframe>
-                <div class="browser-loading" aria-hidden="true"><span class="browser-loading-bar"></span></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ TENTANG ============ -->
-    <section class="section" id="about" aria-labelledby="about-title">
-      <div class="container">
-        <div class="section-head reveal">
-          <h2 class="section-title" id="about-title">Karier yang mempertemukan pendidikan dan teknologi</h2>
-          <p class="section-lead">
-            Latar belakang pendidikan bahasa Inggris bertemu fondasi komputer dan jaringan, dan sebuah
-            karier yang terus menyatukan keduanya.
-          </p>
-        </div>
-
-        <div class="about-grid">
-          <div class="about-story reveal">
-            <p>
-              Mohammad Yusuf Rizaldy menempuh <strong>Pendidikan Bahasa Inggris</strong> di STKIP PGRI JOMBANG
-              dan <strong>Teknik Komputer Jaringan</strong> di SMKN 3 JOMBANG. Kombinasi yang tidak biasa dan
-              menjadi penentu arah sejak saat itu: pengajaran dan teknologi, berdampingan.
-            </p>
-            <p>
-              Ia mulai mengajar bahasa Inggris sejak dini, sebagai tutor di Effective English Course dan guru
-              bahasa Inggris di EFB English Course. Ia kemudian bekerja sebagai penerjemah lepas dan editor
-              tesis, serta menjadi relawan penerjemah untuk Program Study Abroad UNAIR - MDC.
-            </p>
-            <p>
-              Tahun-tahun di bidang penjualan dan akun eksekutif di PT. Central Wire Industrial, SHARP Indonesia,
-              dan by.U Digital Provider by Telkomsel membangun komunikasi yang kuat menghadap pelanggan:
-              penjualan langsung, demonstrasi produk, strategi pasar, dan database outlet yang mencakup Jawa,
-              Bali, dan Nusa Tenggara.
-            </p>
-            <p>
-              Lalu datang sisi teknisnya. Sebagai <strong>Penyedia Server dan Node di Evernode</strong>, ia memasang,
-              mengonfigurasi, dan memelihara node server berbasis Ubuntu di jaringan Xahau, bekerja dengan VPS,
-              jaringan, firewall, wallet, dan script otomatisasi.
-            </p>
-            <p>
-              Kini, sebagai <strong>Guru Kelas Bilingual di MI PLUS Darul Falah</strong>, ia membawa semuanya ke dalam
-              kelas: materi pembelajaran bilingual, media interaktif, dan WebApp yang ia bangun sendiri, mulai dari
-              simulasi ujian, jadwal, hingga penilaian, dengan pengembangan berbantuan AI dan alat desain yang
-              membentuk cara ia bekerja.
-            </p>
-          </div>
-
-          <aside class="about-card reveal" aria-label="Informasi pribadi">
-            <h3 class="about-card-title">Informasi Pribadi</h3>
-            <dl class="info-list" id="personal-info"></dl>
-          </aside>
-        </div>
-
-        <!-- Konsep irisan bidang -->
-        <div class="intersection reveal" aria-labelledby="intersection-title">
-          <div class="intersection-head">
-            <h3 class="intersection-title" id="intersection-title">Enam bidang, satu cara bekerja</h3>
-            <p>Pendidikan &times; Teknologi &times; Pengembangan Web &times; Infrastruktur IT &times; AI &times; Desain</p>
-          </div>
-          <div class="intersection-grid" id="domains-grid"></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ PENGALAMAN ============ -->
-    <section class="section section-alt" id="experience" aria-labelledby="experience-title">
-      <div class="container">
-        <div class="section-head reveal">
-          <h2 class="section-title" id="experience-title">Pengalaman Profesional</h2>
-          <p class="section-lead">Linimasa kronologis dari pengajaran kelas bilingual hingga infrastruktur server dan semua yang ada di antaranya.</p>
-        </div>
-        <div class="timeline" id="experience-list"></div>
-        <p class="timeline-note reveal">
-          PH, UTS, dan UAS merujuk pada penilaian sekolah di Indonesia: Penilaian Harian,
-          ujian tengah semester, dan ujian akhir semester.
+    <div class="hero-inner">
+      <aside class="hero-card">
+        <h2 class="hero-card-title">Pendidikan Bertemu Teknologi</h2>
+        <p class="hero-card-text">
+          Guru Kelas Bilingual yang membangun
+          <a class="hl" href="v1/#projects">WebApp pembelajaran</a> sendiri
+          dan mengelola server Ubuntu. Unduh CV untuk detail lengkapnya.
         </p>
-      </div>
-    </section>
+        <a class="hero-card-btn" href="Curriculum%20Vitae.pdf" target="_blank" rel="noopener noreferrer">
+          Download My CV <span aria-hidden="true">&rarr;</span>
+        </a>
+      </aside>
 
-    <!-- ============ PENDIDIKAN ============ -->
-    <section class="section" id="education" aria-labelledby="education-title">
-      <div class="container">
-        <div class="section-head reveal">
-          <h2 class="section-title" id="education-title">Latar Belakang Pendidikan</h2>
-          <p class="section-lead">Studi formal dalam pendidikan bahasa Inggris dan komputer jaringan, ditambah kursus bahasa Inggris.</p>
-        </div>
-        <div class="edu-grid" id="education-list"></div>
-      </div>
-    </section>
+      <figure class="hero-photo">
+        <img src="images/me.png" alt="Potret Mohammad Yusuf Rizaldy" width="1098" height="1432" />
+      </figure>
 
-    <!-- ============ KEAHLIAN ============ -->
-    <section class="section section-alt" id="skills" aria-labelledby="skills-title">
-      <div class="container">
-        <div class="section-head reveal">
-          <h2 class="section-title" id="skills-title">Keahlian &amp; Alat</h2>
-          <p class="section-lead">Alat dan teknologi di balik pekerjaan, di lima bidang sesuai CV.</p>
-        </div>
-        <div class="skills-grid" id="skills-list"></div>
-
-        <div class="languages reveal">
-          <h3 class="languages-title">Bahasa</h3>
-          <ul class="languages-list" id="languages-list"></ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ PROYEK ============ -->
-    <section class="section" id="projects" aria-labelledby="projects-title">
-      <div class="container">
-        <div class="section-head reveal">
-          <h2 class="section-title" id="projects-title">Proyek &amp; Karya</h2>
-          <p class="section-lead">WebApp, simulasi, dan alat, sebagian besar dibangun untuk pembelajaran dan persiapan ujian.</p>
-        </div>
-
-        <div class="filters reveal" role="group" aria-label="Filter proyek" id="project-filters"></div>
-        <div class="projects-grid" id="projects-list"></div>
-      </div>
-    </section>
-
-    <!-- ============ PENCAPAIAN ============ -->
-    <section class="section section-alt" id="achievements" aria-labelledby="achievements-title">
-      <div class="container">
-        <div class="section-head reveal">
-          <h2 class="section-title" id="achievements-title">Pencapaian</h2>
-          <p class="section-lead">Penghargaan dan peran di bidang bahasa, keamanan siber, pendidikan, dan olahraga, sesuai CV.</p>
-        </div>
-        <ol class="achievements-list" id="achievements-list"></ol>
-      </div>
-    </section>
-
-    <!-- ============ KONTAK ============ -->
-    <section class="section" id="contact" aria-labelledby="contact-title">
-      <div class="container">
-        <div class="section-head reveal">
-          <h2 class="section-title" id="contact-title">Mari Terhubung</h2>
-          <p class="section-lead">Terbuka untuk kolaborasi, proyek pengajaran, serta pekerjaan web dan server.</p>
-        </div>
-
-        <div class="contact-grid reveal">
-          <div class="contact-intro">
-            <p>
-              Baik itu pendidikan bilingual, WebApp pembelajaran, pengembangan web, atau administrasi
-              server, silakan hubungi melalui salah satu saluran di bawah ini.
-            </p>
-            <p class="contact-loc">
-              Berdomisili di Jombang, Jawa Timur, Indonesia
-            </p>
-          </div>
-          <ul class="contact-list" id="contact-list"></ul>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- ============ FOOTER ============ -->
-  <footer class="site-footer" aria-labelledby="footer-title">
-    <div class="container footer-grid">
-      <div class="footer-brand">
-        <p class="footer-name" id="footer-title">Mohammad Yusuf Rizaldy</p>
-        <p class="footer-pos">Pendidik, Pengembang Web, dan Praktisi IT yang memadukan pendidikan dengan teknologi digital.</p>
-        <p class="footer-links">
-          <a href="https://suuf24.vercel.app" target="_blank" rel="noopener noreferrer">suuf24.vercel.app</a>
-          <a href="https://bit.ly/linkedinYusuf" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-          <a href="https://www.instagram.com/suuf24/" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <div class="hero-copy">
+        <h1 class="hero-title">Pendidik, Pengembang Web, dan <span class="hl">Praktisi IT</span></h1>
+        <p class="hero-p">
+          Guru Kelas Bilingual di MI PLUS Darul Falah yang membangun
+          <span class="hl">simulasi ujian dan WebApp pembelajaran</span> untuk siswanya.
         </p>
-      </div>
-      <nav class="footer-nav" aria-label="Navigasi footer">
-        <p class="footer-label">Navigasi Cepat</p>
-        <ul id="footer-nav-list"></ul>
-      </nav>
-      <div class="footer-contact">
-        <p class="footer-label">Kontak</p>
-        <ul>
-          <li><a href="mailto:mailtoyusufrizaldy@gmail.com">mailtoyusufrizaldy@gmail.com</a></li>
-          <li><a href="tel:+6285103974297">(+62) 851 0397 4297</a></li>
+        <p class="hero-p">
+          Mantan Penyedia Server dan Node di Evernode: instalasi, konfigurasi, dan
+          maintenance <span class="hl">server Ubuntu</span> di jaringan Xahau.
+        </p>
+        <ul class="hero-stats">
+          <li><strong>16</strong><span>Proyek digital dibangun</span></li>
+          <li><strong>9</strong><span>Pengalaman profesional</span></li>
+          <li><strong>3</strong><span>Bahasa dikuasai</span></li>
         </ul>
       </div>
     </div>
-    <div class="container footer-bottom">
-      <p>&copy; <span id="year">2026</span> Mohammad Yusuf Rizaldy. Semua hak dilindungi.</p>
+
+    <svg class="hero-zigzag" viewBox="0 0 130 96" aria-hidden="true">
+      <circle cx="4" cy="88" r="3" />
+      <polyline points="4,88 22,74 42,86 64,58 88,68 112,36 126,14" />
+    </svg>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>&copy; 2026 Mohammad Yusuf Rizaldy</p>
+      <p class="footer-links">
+        <a href="v1/">Portofolio lengkap</a>
+        <a href="https://bit.ly/linkedinYusuf" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://www.instagram.com/suuf24/" target="_blank" rel="noopener noreferrer">Instagram</a>
+      </p>
     </div>
   </footer>
 
-  <!-- ============ SPRITE IKON ============ -->
-  <svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
-    <defs>
-      <symbol id="i-education" viewBox="0 0 24 24"><path d="M22 9 12 4 2 9l10 5 10-5z"/><path d="M6 11.5V16c0 1.1 2.7 2 6 2s6-.9 6-2v-4.5"/><path d="M22 9v5"/></symbol>
-      <symbol id="i-technology" viewBox="0 0 24 24"><rect x="7" y="7" width="10" height="10" rx="2"/><rect x="11" y="11" width="2" height="2"/><path d="M9 2v3M15 2v3M9 19v3M15 19v3M2 9h3M2 15h3M19 9h3M19 15h3"/></symbol>
-      <symbol id="i-web" viewBox="0 0 24 24"><polyline points="8 6 2 12 8 18"/><polyline points="16 6 22 12 16 18"/></symbol>
-      <symbol id="i-server" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="7" rx="2"/><rect x="3" y="13" width="18" height="7" rx="2"/><path d="M7 7.5h.01M7 16.5h.01M11 7.5h6M11 16.5h6"/></symbol>
-      <symbol id="i-ai" viewBox="0 0 24 24"><path d="M12 3l1.7 4.3L18 9l-4.3 1.7L12 15l-1.7-4.3L6 9l4.3-1.7L12 3z"/><path d="M18.5 15.5l.9 2.1 2.1.9-2.1.9-.9 2.1-.9-2.1-2.1-.9 2.1-.9.9-2.1z"/></symbol>
-      <symbol id="i-design" viewBox="0 0 24 24"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><circle cx="11" cy="11" r="2"/></symbol>
-      <symbol id="i-arrow-right" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></symbol>
-      <symbol id="i-chevron-down" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></symbol>
-      <symbol id="i-external" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></symbol>
-      <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></symbol>
-      <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
-      <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></symbol>
-      <symbol id="i-linkedin" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4V8h4v1.5A5.98 5.98 0 0 1 16 8z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></symbol>
-      <symbol id="i-instagram" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></symbol>
-    </defs>
-  </svg>
-
-  <script src="js/data.js"></script>
-  <script src="js/main.js"></script>
+  <script src="js/landing.js"></script>
 </body>
 </html>
