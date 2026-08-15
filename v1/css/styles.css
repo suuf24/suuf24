@@ -1642,7 +1642,14 @@ button {
 /* ---------- Responsive ---------- */
 @media (max-width: 1024px) {
   .hero-inner {
-    grid-template-columns: 1fr;
+    /* minmax(0, 1fr) so the column can shrink below the demo's content size;
+       without it the fixed-size mini-browser blows the hero out horizontally */
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .hero-copy,
+  .hero-visual {
+    min-width: 0;
   }
 
   .hero-visual {

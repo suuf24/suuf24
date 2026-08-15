@@ -472,8 +472,23 @@
 
     function fitScale() {
       if (!viewport) return;
-      var avail = viewport.parentElement.clientWidth;
-      if (!avail) return;
+      // compute the room available for the stage from the page container, not
+      // the demo itself: the demo's own width is stretched by the fixed stage
+      // size, so reading it would make the scale chase its own tail (the old
+      // code overflowed the hero on narrow screens because of that)
+      var container = document.querySelector(".container");
+      var demo = viewport.closest(".demo");
+      if (!container || !demo) return;
+      var css = getComputedStyle(container);
+      var dcs = getComputedStyle(demo);
+      var avail =
+        container.clientWidth -
+        parseFloat(css.paddingLeft) -
+        parseFloat(css.paddingRight) -
+        parseFloat(dcs.paddingLeft) -
+        parseFloat(dcs.paddingRight) -
+        2; // demo border
+      if (avail <= 0) return;
       // stage width is always min(384px, avail); the content scale follows so
       // the rendered project fills the stage regardless of its design width
       var scale =
