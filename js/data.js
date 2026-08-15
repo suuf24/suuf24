@@ -237,11 +237,19 @@ const PORTFOLIO = {
   ],
 
   projects: [
+    // Utilitas di awal, dilanjutkan Game, Aplikasi Web, dan Pendidikan di akhir
     {
-      name: "Simple Present",
-      url: "https://suuf24.github.io/simplepresent/",
-      category: "Pendidikan",
-      description: "Aplikasi web interaktif untuk berlatih Simple Present tense dalam bahasa Inggris.",
+      name: "Portfolio Simulator",
+      url: "https://suuf24.github.io/Portfolio-Simulator/",
+      category: "Utilitas",
+      description:
+        "Simulator portofolio untuk menghitung PnL bersih, biaya maker/taker, dan pertumbuhan saldo secara akurat.",
+    },
+    {
+      name: "Binance Futures PnL Calculator",
+      url: "https://suuf24.github.io/Binance-Futures-PnL-Calculator/",
+      category: "Utilitas",
+      description: "Kalkulator untuk menghitung laba rugi (profit and loss) Binance Futures.",
     },
     {
       name: "Snake Game",
@@ -250,10 +258,22 @@ const PORTFOLIO = {
       description: "Permainan Snake klasik yang dibuat sebagai aplikasi web.",
     },
     {
-      name: "Binance Futures PnL Calculator",
-      url: "https://suuf24.github.io/Binance-Futures-PnL-Calculator/",
-      category: "Utilitas",
-      description: "Kalkulator untuk menghitung laba rugi (profit and loss) Binance Futures.",
+      name: "BrixApp",
+      url: "https://brixapp.vercel.app",
+      category: "Aplikasi Web",
+      description: "Proyek aplikasi web serbaguna.",
+    },
+    {
+      name: "Art Ensamble",
+      url: "https://art-ensamble.vercel.app",
+      category: "Aplikasi Web",
+      description: "Tampilan ensambel seni secara daring.",
+    },
+    {
+      name: "Simple Present",
+      url: "https://suuf24.github.io/simplepresent/",
+      category: "Pendidikan",
+      description: "Aplikasi web interaktif untuk berlatih Simple Present tense dalam bahasa Inggris.",
     },
     {
       name: "Ujian Jawa",
@@ -314,18 +334,6 @@ const PORTFOLIO = {
       url: "https://phinforalgorithm.vercel.app",
       category: "Pendidikan",
       description: "Aplikasi web yang menyajikan informasi PH (Penilaian Harian).",
-    },
-    {
-      name: "BrixApp",
-      url: "https://brixapp.vercel.app",
-      category: "Aplikasi Web",
-      description: "Proyek aplikasi web serbaguna.",
-    },
-    {
-      name: "Art Ensamble",
-      url: "https://art-ensamble.vercel.app",
-      category: "Aplikasi Web",
-      description: "Tampilan ensambel seni secara daring.",
     },
   ],
 
