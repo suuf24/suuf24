@@ -60,6 +60,20 @@
 
   --container: 1120px;
   --header-h: 68px;
+
+  /* satu variabel untuk durasi semua animasi dan transisi; ubah di sini
+     untuk mengganti durasi di seluruh situs sekaligus */
+  --anim-dur: 1.5s;
+}
+
+/* Semua transisi & animasi memakai --anim-dur (default 1.5s). Override
+   global ini diletakkan sebelum blok reduced-motion, jadi preferensi
+   aksesibilitas tetap menang. */
+*,
+*::before,
+*::after {
+  transition-duration: var(--anim-dur) !important;
+  animation-duration: var(--anim-dur) !important;
 }
 
 /* ---------- Reset ---------- */

@@ -630,6 +630,18 @@
       });
     }
 
+    // read the central animation duration from CSS (--anim-dur) so changing
+    // the token in styles.css also changes the scroll animation; fallback 1.5s
+    var ANIM_MS = 1500;
+    try {
+      var cssDur = window
+        .getComputedStyle(document.documentElement)
+        .getPropertyValue("--anim-dur")
+        .trim();
+      var m = cssDur.match(/^([\d.]+)s$/);
+      if (m) ANIM_MS = parseFloat(m[1]) * 1000;
+    } catch (e) {}
+
     var rafId = null;
 
     function easeInOutCubic(t) {
@@ -648,11 +660,8 @@
       targetY = Math.max(0, Math.min(targetY, maxY));
       if (Math.abs(targetY - startY) < 2) return;
 
-      var dist = Math.abs(targetY - startY);
       // reduced motion: short, quick transition instead of an instant jump
-      var duration = forcedDuration
-        ? forcedDuration
-        : Math.min(1000, Math.max(450, dist * 0.5));
+      var duration = forcedDuration ? forcedDuration : ANIM_MS;
       var start = performance.now();
 
       function step(now) {
