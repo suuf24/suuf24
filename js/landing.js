@@ -81,7 +81,7 @@
 (function () {
   "use strict";
 
-  var IDLE_MS = 4000;
+  var IDLE_MS = 7000;
   var TARGET = "v1/";
   var timer = null;
 
