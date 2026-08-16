@@ -75,38 +75,23 @@
 })();
 
 /* ============================================================
-   Auto-redirect: after 4s without any user activity, go to the
-   full portfolio (v1/). Any interaction resets the countdown.
+   Auto-redirect: setelah ketiga kata peran (Pendidik / IT
+   Enthusiast / Vibe Coder) selesai muncul di hero, pindah ke
+   portofolio lengkap (v1/). Kata ke-3 mulai t=4.5s dan slide
+   0.75s -> selesai 5.25s; redirect 6s setelah load (+ buffer).
    ============================================================ */
 (function () {
   "use strict";
 
-  var IDLE_MS = 7000;
   var TARGET = "v1/";
-  var timer = null;
+  var REDIRECT_MS = 6000; // 3 kata selesai di 5.25s, + 0.75s buffer
+  var LEAVE_MS = 750; // transisi exit 0.75s = var(--anim-dur) di css/landing.css
 
-  function go() {
-    window.location.href = TARGET;
-  }
-
-  function reset() {
-    clearTimeout(timer);
-    timer = setTimeout(go, IDLE_MS);
-  }
-
-  // any interaction counts as activity and restarts the countdown
-  ["pointerdown", "pointermove", "keydown", "wheel", "touchstart", "scroll"].forEach(function (name) {
-    document.addEventListener(name, reset, { passive: true });
-  });
-
-  // pause while the tab is hidden, restart fresh when it is visible again
-  document.addEventListener("visibilitychange", function () {
-    if (document.hidden) {
-      clearTimeout(timer);
-    } else {
-      reset();
-    }
-  });
-
-  reset();
+  setTimeout(function () {
+    // fade-out + naik perlahan (body.leaving), lalu navigasi ke portofolio lengkap
+    document.body.classList.add("leaving");
+    setTimeout(function () {
+      window.location.href = TARGET;
+    }, LEAVE_MS);
+  }, REDIRECT_MS);
 })();

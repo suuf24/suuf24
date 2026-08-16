@@ -439,7 +439,15 @@
     var loading = document.querySelector(".browser-loading");
     if (!frame || !data.projects.length) return;
 
+    // tampilan awal demo = Snake Game (bukan proyek pertama) agar "game"
+    // langsung terlihat; cari berdasarkan nama supaya tahan perubahan urutan
     var index = 0;
+    for (var i = 0; i < data.projects.length; i++) {
+      if (data.projects[i].name === "Snake Game") {
+        index = i;
+        break;
+      }
+    }
     var loadTimer = null;
 
     function showLoading() {
@@ -789,5 +797,16 @@
     document.addEventListener("DOMContentLoaded", boot);
   } else {
     boot();
+  }
+
+  /* entrance halaman: setelah semua aset termuat, fade-in 0.75s
+     (body.page-enter -> .loaded, lihat css/styles.css) */
+  function finishEnter() {
+    document.body.classList.add("loaded");
+  }
+  if (document.readyState === "complete") {
+    finishEnter();
+  } else {
+    window.addEventListener("load", finishEnter);
   }
 })();

@@ -1610,6 +1610,20 @@ button {
   transform: none;
 }
 
+/* ---------- Entrance halaman (0.75s = var(--anim-dur)) ---------- */
+/* JS (main.js) menambah .loaded saat window load -> halaman fade-in +
+   naik perlahan, menyambung transisi exit dari landing page */
+body.page-enter {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 0.75s ease, transform 0.75s ease;
+}
+
+body.page-enter.loaded {
+  opacity: 1;
+  transform: none;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -1623,9 +1637,12 @@ button {
     transition-duration: 0.01ms !important;
   }
 
+  /* Pengecualian (diminta eksplisit): entrance halaman & reveal scroll
+     TETAP dianimasikan 0.75s, bukan dimatikan oleh reduced-motion */
+  body.page-enter,
+  body.page-enter.loaded,
   .reveal {
-    opacity: 1;
-    transform: none;
+    transition-duration: 0.75s !important;
   }
 
   /* scroll-driven timeline effects are animation too: keep the original
