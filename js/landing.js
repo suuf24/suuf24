@@ -73,3 +73,40 @@
     }
   });
 })();
+
+/* ============================================================
+   Auto-redirect: after 4s without any user activity, go to the
+   full portfolio (v1/). Any interaction resets the countdown.
+   ============================================================ */
+(function () {
+  "use strict";
+
+  var IDLE_MS = 4000;
+  var TARGET = "v1/";
+  var timer = null;
+
+  function go() {
+    window.location.href = TARGET;
+  }
+
+  function reset() {
+    clearTimeout(timer);
+    timer = setTimeout(go, IDLE_MS);
+  }
+
+  // any interaction counts as activity and restarts the countdown
+  ["pointerdown", "pointermove", "keydown", "wheel", "touchstart", "scroll"].forEach(function (name) {
+    document.addEventListener(name, reset, { passive: true });
+  });
+
+  // pause while the tab is hidden, restart fresh when it is visible again
+  document.addEventListener("visibilitychange", function () {
+    if (document.hidden) {
+      clearTimeout(timer);
+    } else {
+      reset();
+    }
+  });
+
+  reset();
+})();
